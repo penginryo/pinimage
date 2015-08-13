@@ -7,9 +7,15 @@
 	= csrf_meta_tags
 %body
 	%nav.navbar.navbar-default
-		.container
+		.navbar-header
 			.navbar-brand= link_to "Pin Board", root_path
 
+			%button.button.navbar-toggle{:type => "button", :data => {:toggle => "collapse", :target => "#nav-content"}}
+				%span.icon-bar
+				%span.icon-bar 
+				%span.icon-bar
+
+		#nav-content.collapse.navbar-collapse
 			-if user_signed_in?
 				%ul.nav.navbar-nav.navbar-right
 					%li= link_to "New Pin", new_pin_path
