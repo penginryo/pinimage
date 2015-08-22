@@ -3,6 +3,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h2>Edit Your Pin</h2>
+        <%= devise_error_messages! %> 
       </div>
 
       <div class="panel-body">
@@ -36,7 +37,7 @@
         </div>
 
         <div class="form-group">
-          <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true, input_html: { class: 'form-control'} %>
+          <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: false, input_html: { class: 'form-control'} %>
         </div>
 
         <div class="form-actions">
